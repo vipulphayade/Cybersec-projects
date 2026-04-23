@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Situation Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-intro card">
+        <div class="hero-copy">
+          <div class="app-logo">
+            LEGAL SITUATION ANALYZER
+          </div>
+          <h1 class="hero-title">Understand which Maharashtra housing society rule may apply to your situation</h1>
+          <p class="hero-text hero-description">
+            Describe your housing society issue in plain language. The system analyzes
+            your situation and identifies the most relevant Maharashtra Cooperative
+            Housing Society bye-law. It then explains the rule and highlights
+            important conditions or procedural requirements.
+          </p>
+        </div>
+      </header>
+
+      <main class="main-layout">
+        <section class="card input-card">
+          <div class="card-heading">
+            <h2 class="section-title">Describe Your Situation</h2>
+            <p>Write your issue in simple words. Include what happened, who decided it, and why you think the action may be wrong.</p>
+          </div>
+
+          <form id="analyze-form">
+            <label for="description" class="sr-only">Situation description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="10"
+              maxlength="3000"
+              placeholder="Example: The committee is giving parking preference to some members even though there is no approved parking policy."
+              required
+            ></textarea>
+
+            <div class="actions">
+              <button type="submit" id="submit-button">Analyze situation</button>
+              <span id="status-text" aria-live="polite"></span>
+            </div>
+          </form>
+        </section>
+
+        <section class="result-column">
+          <section class="card result-card">
+            <div class="card-heading">
+              <h2 class="section-title">Result</h2>
+              <p>The answer is meant to help members understand the rule. It should still be checked against the society's registered bye-laws.</p>
+            </div>
+
+            <div id="result" class="result-placeholder">
+              <p>Your result will appear here after analysis.</p>
+            </div>
+          </section>
+
+          <section id="followup-panel" class="card followup-panel hidden">
+            <div class="card-heading small">
+              <h2 class="section-title">Ask a Follow-up Question</h2>
+              <p>Example: Does this need General Body approval? What documents should be checked?</p>
+            </div>
+            <form id="followup-form">
+              <label for="followup-question" class="sr-only">Follow-up question</label>
+              <textarea
+                id="followup-question"
+                name="followup-question"
+                rows="4"
+                maxlength="1500"
+                placeholder="Ask a follow-up question about the result."
+              ></textarea>
+              <div class="actions">
+                <button type="submit" id="followup-button">Ask follow-up</button>
+                <span id="followup-status" aria-live="polite"></span>
+              </div>
+            </form>
+            <div id="followup-result" class="followup-result hidden"></div>
+          </section>
+        </section>
+
+        <aside class="sidebar-stack">
+          <section class="card side-card example-card">
+            <span class="panel-label">Example issue</span>
+            <p>
+              Our society used sinking fund for routine maintenance without any
+              structural report or General Body approval.
+            </p>
+          </section>
+
+          <section class="card side-card help-card">
+            <span class="panel-label">What helps most</span>
+            <ul class="help-list">
+              <li>Describe what happened and who made the decision.</li>
+              <li>Mention the money, repairs, parking, membership, or meeting issue involved.</li>
+              <li>Add whether the society passed a resolution, gave notice, or shared documents.</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
