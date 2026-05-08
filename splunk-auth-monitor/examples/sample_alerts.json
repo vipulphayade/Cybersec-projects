@@ -1,0 +1,10 @@
+{
+  "alert_type": "possible_privilege_escalation",
+  "severity": "high",
+  "timestamp": "2026-01-01T10:00:00Z",
+  "username": "SYSTEM",
+  "host": "HOST-EXAMPLE",
+  "source_ip": "unknown",
+  "description": "Special privileges assigned after login",
+  "supporting_event_id": 4672
+}

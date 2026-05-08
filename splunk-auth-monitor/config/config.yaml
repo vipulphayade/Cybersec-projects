@@ -1,0 +1,27 @@
+app:
+  log_level: INFO
+  poll_interval_seconds: 15
+  historical_lookback_minutes: 15
+  start_from_latest: false
+
+detection:
+  brute_force_threshold: 10
+  brute_force_window_minutes: 5
+  business_hours_start: 8
+  business_hours_end: 18
+  privilege_window_minutes: 10
+
+alerts:
+  export_json:
+    enabled: true
+    path: output/alerts.json
+
+splunk:
+  enabled: false
+  hec_url: https://localhost:8088/services/collector
+  token: YOUR_SPLUNK_TOKEN
+  index: security
+  source: splunk-auth-monitor
+  sourcetype: json
+  verify_tls: false
+  timeout_seconds: 10
