@@ -1,0 +1,8 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+SQLAlchemy==2.0.40
+psycopg2-binary==2.9.10
+pydantic==2.11.3
+sentence-transformers==3.4.1
+pgvector==0.3.6
+slowapi==0.1.9
